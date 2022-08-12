@@ -1,22 +1,21 @@
 import * as kafkasaur from "https://deno.land/x/kafkasaur@v0.0.7/index.ts";
-import { config } from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
 
 import { addTodo } from './todo.ts';
 
 const { 
         BOOTSTRAP_SERVERS,
         SECURITY_PROTOCOL,
-        SASL_MECHAINSM,
+        SASL_MECHANISM,
         SASL_USERNAME,
         SASL_PASSWORD,
         SESSION_TIMEOUT 
-    } = config();
+    } = Deno.env.toObject();
 
 const kafka = new Kafkasaur({
         clientId: 'example-consumer',
         brokers: [BOOTSTRAP_SERVERS],
         sasl: {
-            mechanism: SASL_MECHAINSM,
+            mechanism: SASL_MECHANISM,
             username: SASL_USERNAME,
             password: SASL_PASSWORD
         },
