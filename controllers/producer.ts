@@ -1,4 +1,4 @@
-import {Kafkasaur} from "https://deno.land/x/kafkasaur/index.ts"
+import * as kafkasaur from "https://deno.land/x/kafkasaur@v0.0.7/index.ts";
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 
 const { 
