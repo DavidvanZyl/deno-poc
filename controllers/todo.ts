@@ -1,5 +1,4 @@
-import { config } from "https://deno.land/x/dotenv/mod.ts";
-const { DATA_API_KEY, APP_ID } = config();
+const { DATA_API_KEY, APP_ID } = Deno.env.toObject();
 
 const BASE_URI = `https://data.mongodb-api.com/app/${APP_ID}/endpoint/data/v1/action`;
 const DATA_SOURCE = "Cluster0";
