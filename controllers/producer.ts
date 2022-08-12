@@ -1,4 +1,4 @@
-import * as kafkasaur from "https://deno.land/x/kafkasaur@v0.0.7/index.ts";
+import * as Kafkasaur from "https://deno.land/x/kafkasaur@v0.0.7/index.ts";
 
 const { 
     BOOTSTRAP_SERVERS,
