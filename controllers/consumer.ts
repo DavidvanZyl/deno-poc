@@ -1,5 +1,5 @@
 import * as kafkasaur from "https://deno.land/x/kafkasaur@v0.0.7/index.ts";
-import { config } from "https://deno.land/x/dotenv/mod.ts";
+import { config } from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
 
 import { addTodo } from './todo.ts';
 
