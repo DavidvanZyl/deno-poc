@@ -37,7 +37,7 @@ messages.push(testmessage)
 const sendMessage = () => {
   producer.send({
     topic,
-    {
+    message: {
         "title": "Todo 1",
         "complete": false,
         "todoId": 1
