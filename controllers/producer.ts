@@ -1,3 +1,4 @@
+import { env } from "deno";
 import * as Kafkasaur from "https://deno.land/x/kafkasaur@v0.0.7/index.ts";
 
 const { 
@@ -7,7 +8,7 @@ const {
     SASL_USERNAME,
     SASL_PASSWORD,
     SESSION_TIMEOUT 
-} = Deno.env.toObject();
+} = env.toObject();
 
 const kafka = new Kafkasaur({
     clientId: 'example-consumer',
